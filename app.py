@@ -9,8 +9,8 @@ def load_results_to_s3():
 	client = boto3.client(
 	    's3', 
 	    endpoint_url='https://s3.amazonaws.com',
-	    aws_access_key_id=os.getenv('AWS_ACCESS_KEY'),
-	    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
+	    aws_access_key_id=os.getenv('ACCESS_KEY'),
+	    aws_secret_access_key=os.getenv('SECRET_ACCESS_KEY')
 	)
 	json_data = json.dumps({'test': 'hello'})
 	client.put_object(
