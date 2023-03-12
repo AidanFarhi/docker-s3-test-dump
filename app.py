@@ -1,6 +1,7 @@
 import os
 import boto3
 import json
+import sys
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -25,3 +26,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+	sys.exit(os.EX_OK)
