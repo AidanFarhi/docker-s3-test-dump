@@ -1,7 +1,6 @@
 import os
 import boto3
 import json
-import sys
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -20,10 +19,10 @@ def load_results_to_s3():
 		Body=json_data
 	)
 
-def main():
+def main(event, context):
 	load_results_to_s3()
+	return {'statusCode': 200}
 
 
 if __name__ == '__main__':
 	main()
-	sys.exit(os.EX_OK)
