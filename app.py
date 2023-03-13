@@ -15,7 +15,7 @@ def load_results_to_s3():
 	json_data = json.dumps({'test': 'hello'})
 	client.put_object(
 		Bucket=os.getenv('BUCKET_NAME'), 
-		Key=f'real_estate/test.json',
+		Key=f'real_estate/test_2.json',
 		Body=json_data
 	)
 
