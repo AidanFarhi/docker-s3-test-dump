@@ -45,4 +45,4 @@ jobs:
         run: |
           aws lambda update-function-code \
             --function-name testDumpToS3 \
-            --image-uri $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG:latest
+            --image-uri $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
